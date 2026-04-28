@@ -23,7 +23,7 @@ function ModalMusic({ isShow, onClickAction }) {
           <div className="modal-content">
             <div className="modal-header"></div>
             <div className="modal-body">
-              <h2 className="sub-title">Wedding Invitation</h2>
+              <h2 className="sub-title">Wedding Invitati</h2>
               <h2 className="title">Arin &amp; Miftah</h2>
             </div>
             <div className="modal-footer">
