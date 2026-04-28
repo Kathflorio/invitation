@@ -15,7 +15,7 @@ function CovidSection() {
           <div className="col-md-8 col-md-offset-2 text-center fh5co-heading">
             <h2 className="main-font">Informasi Tambahan</h2>
             <p className="info" style={{ marginBottom: '-16px' }}>
-              Berkaitan dengan kondisi pandemi saat ini yang belum berakhir, kami mengingatkan kepada seluruh tamu undangan
+              Berkaitan dengan kondisi pandem saat ini yang belum berakhir, kami mengingatkan kepada seluruh tamu undangan
               untuk mengikuti himbauan Kementerian Kesehatan, yaitu dengan tetap mentaati protokol kesehatan.
             </p>
           </div>
