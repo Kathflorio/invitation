@@ -2,7 +2,6 @@ import React, { Fragment } from 'react';
 import { bool } from 'prop-types';
 
 import WeddingInfoBox from './WeddingInfoBox';
-//import ButtonLive from './ButtonLive';
 import { styWrapper } from './styles';
 
 function WeddingSection({ isInvitation }) {
@@ -13,25 +12,31 @@ function WeddingSection({ isInvitation }) {
         <div className="container">
           <div className="row">
             <div className="col-md-8 col-md-offset-2 text-center fh5co-heading">
-              <span className="bismillah">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم</span>
-              <h2 className="main-font main-font__wedding">Akad Nikah dan Syukuran Pernikahan</h2>
-              <span className="sub-title sub-title__wedding">Insha Allah akan diselenggarakan pada:</span>
+              <h2 className="main-font main-font__wedding" style={{ fontSize: '3.5rem', marginTop: '20px' }}>
+                Ceremonia y Recepción
+              </h2>
+              <span className="sub-title sub-title__wedding" style={{ color: '#ffffff', opacity: 0.9 }}>
+                Con la bendición de Dios y mis padres, celebraré mis XV años el:
+              </span>
             </div>
           </div>
           <div className="row">
             <div className="col-md-10 col-md-offset-1">
-            <WeddingInfoBox
-                title="Akad Nikah"
-                time="08.00 WIB"
-                date="Minggu, 11 September 2022"
-                description="Jl. Laswi Cangkring RT/RW 05/07 kel. Jelekong, kec. Baleendah, kab. Bandung"
-            />
-            <WeddingInfoBox
-              title="Syukuran Pernikahan"
-              time="11.00 s/d 15.00 WIB"
-              date="Minggu, 11 September 2022"
-              description="Jl. Laswi Cangkring RT/RW 05/07 kel. Jelekong, kec. Baleendah, kab. Bandung"
-            />
+              {/* Bloque de la Misa / Ceremonia Religiosa */}
+              <WeddingInfoBox
+                title="Ceremonia Religiosa"
+                time="16:00 Horas"
+                date="Sábado, 23 de Mayo 2026"
+                description="[Nombre de la Iglesia o Parroquia], [Dirección de la Iglesia]"
+              />
+              
+              {/* Bloque de la Recepción / Fiesta */}
+              <WeddingInfoBox
+                title="Recepción"
+                time="19:00 Horas"
+                date="Sábado, 23 de Mayo 2026"
+                description="[Nombre del Salón o Jardín], [Dirección del evento]"
+              />
             </div>
           </div>
         </div>

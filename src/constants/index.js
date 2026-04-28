@@ -1,12 +1,13 @@
 /**
- * Link
+ * Link - Actualizado para Josseline Scarlet
  */
-export const GOOGLE_CALENDAR_LINK = `https://calendar.google.com/calendar/event?action=TEMPLATE&dates=20220911T010000Z%2F20220911T080000Z&text=Arin+%26+Miftah+Wedding&details=Arin+%26+Miftah+Wedding`;
+export const GOOGLE_CALENDAR_LINK = `https://calendar.google.com/calendar/event?action=TEMPLATE&dates=20260523T180000Z%2F20260524T020000Z&text=XV+Años+Josseline+Scarlet&details=Celebración+de+los+XV+años+de+Josseline+Scarlet`;
 export const GOOGLE_MAPS_LINK = `https://goo.gl/maps/kfFTBJKwRhw3qWut8`;
 
 /**
- * Wedding time
+ * Wedding time -> Quinceañera time (23 de Mayo 2026)
  */
-export const EPOCH_START_EVENT = 1662858000;
-export const EPOCH_END_EVENT = 1662858000;
-export const UTC_WEDDING_TIME = '2022-09-11:04:00:00Z';
+// Este número es el que usa el contador para saber cuánto falta:
+export const EPOCH_START_EVENT = 1779559200; 
+export const EPOCH_END_EVENT = 1779559200;
+export const UTC_WEDDING_TIME = '2026-05-23:18:00:00Z';

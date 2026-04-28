@@ -45,7 +45,6 @@ function Home({ location }) {
         <WeddingSection isInvitation={isInvitation} />
         <CovidSection />
         <LocationSection />
-        <StorySection />
         <PhotoSection />
         <WishesSection codeLink={finalWishesLink} />
         <ConfirmationSection guestName={firstName} isInvitation={isInvitation} codeLink={finalTicketLink} />

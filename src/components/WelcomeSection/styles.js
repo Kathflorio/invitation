@@ -121,8 +121,29 @@ export const styScrollWrapper = css`
 `;
 
 export const styBackground = css`
+  background: linear-gradient(
+      135deg, 
+      #FFDAB9 0%,   /* Peach Puff (Melón claro) */
+      #FFB7B2 50%,  /* Rosa Melón medio */
+      #FF9AA2 100%  /* Rosa pastel cálido */
+    );
   background-size: cover;
-  background-image: url(${Background});
+  position: relative;
+  
+  /* Esto añade un sutil brillo satinado encima */
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/soft-wallpaper.png');
+    opacity: 0.3;
+  }
+  background-size: cover;
+  position: relative;
+  background-size: cover;
   background-position: center;
   width: 100%;
   height: 100%;
