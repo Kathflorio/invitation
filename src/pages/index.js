@@ -46,7 +46,6 @@ function Home({ location }) {
         <CovidSection />
         <LocationSection />
         <PhotoSection />
-        <WishesSection codeLink={finalWishesLink} />
         <ConfirmationSection guestName={firstName} isInvitation={isInvitation} codeLink={finalTicketLink} />
         <FooterSection isInvitation={isInvitation} />
       </Fragment>

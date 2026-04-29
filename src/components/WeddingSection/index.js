@@ -25,17 +25,17 @@ function WeddingSection({ isInvitation }) {
               {/* Bloque de la Misa / Ceremonia Religiosa */}
               <WeddingInfoBox
                 title="Ceremonia Religiosa"
-                time="16:00 Horas"
-                date="Sábado, 23 de Mayo 2026"
-                description="[Nombre de la Iglesia o Parroquia], [Dirección de la Iglesia]"
+                time="19:00 Horas"
+                date="Viernes, 22 de Mayo 2026"
+                description="Iglesia Santa Cruz, Av. C.T.M 3, 77510 Cancún, Q.R."
               />
               
               {/* Bloque de la Recepción / Fiesta */}
               <WeddingInfoBox
                 title="Recepción"
-                time="19:00 Horas"
+                time="21:00 Horas"
                 date="Sábado, 23 de Mayo 2026"
-                description="[Nombre del Salón o Jardín], [Dirección del evento]"
+                description="Salón de eventos Gelem, Av. Lak'in 44-01, PRIVADA SAN ANDRES, 77539 Cancún, Q.R."
               />
             </div>
           </div>

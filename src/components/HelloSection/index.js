@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react';
 import { bool } from 'prop-types';
-
 import { styWrapper } from './styles';
 
 function HelloSection({ isInvitation }) {
@@ -8,20 +7,31 @@ function HelloSection({ isInvitation }) {
 
   return (
     <Fragment>
-      <div id="fh5co-couple" css={styWrapper} style={{ padding: '60px 0' }}>
+      <div id="fh5co-couple" css={styWrapper} style={{ 
+        padding: '80px 0', 
+        background: 'linear-gradient(to bottom, #ffffff 0%, #fff5f5 100%)', // Fondo suave
+        position: 'relative',
+        overflow: 'hidden'
+      }}>
         <div className="container">
           <div className="row">
             <div className="col-md-8 col-md-offset-2 text-center fh5co-heading">
-              <h2 className="main-font" style={{ fontSize: '4.5rem', color: '#855E5E' }}>¡Mis XV Años!</h2>
-              <h3 className="sub-title hs" style={{ color: '#855E5E', opacity: 0.8 }}>{finalSubtitle}</h3>
+              <h4 className="sub-title" style={{ color: '#B58D56', fontSize: '2.2rem', marginBottom: '10px' }}>
+                Estás cordialmente invitado a
+              </h4>
+              <h2 className="main-font" style={{ fontSize: '5rem', color: '#855E5E', margin: '0' }}>¡Mis XV Años!</h2>
+              <h3 className="sub-title hs" style={{ color: '#B58D56', letterSpacing: '3px', marginTop: '10px' }}>{finalSubtitle}</h3>
               
+              <div style={{ width: '100px', height: '2px', background: '#FFB7B2', margin: '30px auto', opacity: 0.5 }}></div>
+
               <p className="info" style={{ 
                 fontStyle: 'italic', 
-                fontSize: '1.2rem', 
-                color: '#5D4037', 
-                lineHeight: '1.8', 
-                maxWidth: '700px', 
-                margin: '20px auto 40px auto' 
+                fontSize: '1.25rem', 
+                color: '#6d4c41', 
+                lineHeight: '1.9', 
+                maxWidth: '650px', 
+                margin: '0 auto 50px auto',
+                fontFamily: 'serif'
               }}>
                 "Hoy mi corazón se llena de gratitud al celebrar el inicio de este nuevo camino. 
                 Doy gracias a Dios por la bendición de la vida y por el amor de mi familia. 
@@ -31,53 +41,76 @@ function HelloSection({ isInvitation }) {
           </div>
           
           <div className="row" style={{ display: 'flex', justifyContent: 'center' }}>
-            <div className="col-md-6 text-center">
-              {/* Tarjeta con el sombreado bonito que mencionaste */}
+            <div className="col-md-7 text-center">
+              
+              {/* TARJETA PRINCIPAL MEJORADA */}
               <div style={{ 
-                backgroundColor: 'rgba(255, 255, 255, 0.6)', 
-                padding: '40px 20px', 
-                borderRadius: '30px', 
-                boxShadow: '0 15px 35px rgba(133, 94, 94, 0.15)', // Sombreado elegante
-                border: '1px solid rgba(255, 183, 178, 0.3)'
+                backgroundColor: 'rgba(255, 255, 255, 0.8)', 
+                backdropFilter: 'blur(10px)',
+                padding: '60px 40px', 
+                borderRadius: '40px 10px 40px 10px', // Bordes asimétricos modernos
+                boxShadow: '0 25px 50px -12px rgba(133, 94, 94, 0.2)', 
+                border: '1px solid rgba(255, 255, 255, 0.4)',
+                position: 'relative'
               }}>
-                <div className="item" style={{ marginBottom: '25px' }}>
-                  {/* Círculo con emoticón y sombreado de profundidad */}
+                
+                <div className="item" style={{ marginBottom: '35px' }}>
                   <div style={{ 
                     margin: '0 auto', 
                     borderRadius: '50%', 
-                    width: '180px', 
-                    height: '180px', 
+                    width: '160px', 
+                    height: '160px', 
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    backgroundColor: 'white',
-                    fontSize: '70px',
-                    border: '4px solid white',
-                    boxShadow: '0 8px 20px rgba(0,0,0,0.08)' // Sombreado del círculo
+                    backgroundColor: '#fff',
+                    border: '8px solid #fdf2f2',
+                    boxShadow: '0 10px 25px rgba(0,0,0,0.05)'
                   }}>
-                    🌸
+                    {/* Aquí podrías poner una foto circular de Josseline si tienes una */}
+                    <span style={{ fontSize: '70px' }}>✨</span>
                   </div>
                 </div>
                 
                 <div className="desc-quinceanera">
-                  <h3 className="main-font" style={{ fontSize: '3.5rem', color: '#855E5E', marginBottom: '10px' }}>
-                    Joseline Scarlet Hernández Florio
+                  <h3 className="main-font" style={{ 
+                    fontSize: '3.8rem', 
+                    color: '#855E5E', 
+                    marginBottom: '5px',
+                    lineHeight: '1.1'
+                  }}>
+                    Josseline Scarlet <br/>
+                    <span style={{ fontSize: '2.8rem', opacity: 0.9 }}>Hernández Florio</span>
                   </h3>
                   
-                  <hr style={{ width: '60px', border: '1px solid #FFB7B2', margin: '20px auto' }} />
+                  <div style={{ 
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    justifyContent: 'center', 
+                    margin: '30px 0' 
+                  }}>
+                    <div style={{ width: '30px', height: '1px', background: '#B58D56' }}></div>
+                    <span style={{ margin: '0 15px', color: '#B58D56', fontSize: '1.2rem' }}>✦</span>
+                    <div style={{ width: '30px', height: '1px', background: '#B58D56' }}></div>
+                  </div>
                   
-                  <p className="parent-name" style={{ color: '#855E5E', fontSize: '1.1rem', lineHeight: '1.6' }}>
-                    <strong style={{ display: 'block', marginBottom: '10px', textTransform: 'uppercase', letterSpacing: '1px' }}>
-                      En compañía de mis padres:
-                    </strong>
-                    <span style={{ color: '#5D4037' }}>Sr. Josue Hernández</span> <br />
-                    <span style={{ color: '#5D4037' }}>& Sra. Maria Selene Florio Suriano</span>
+                  <p className="parent-name" style={{ color: '#855E5E', fontSize: '1.2rem', lineHeight: '1.8' }}>
+                    <span style={{ 
+                      display: 'block', 
+                      marginBottom: '15px', 
+                      textTransform: 'uppercase', 
+                      letterSpacing: '2px', 
+                      fontSize: '0.9rem',
+                      color: '#B58D56',
+                      fontWeight: 'bold'
+                    }}>
+                      Con el amor de mi familia y mis seres queridos
+                    </span>
                   </p>
                 </div>
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </Fragment>
