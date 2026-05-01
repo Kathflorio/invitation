@@ -71,7 +71,6 @@ function CovidSection() {
     </svg>
   );
 
-  
   const cardStyle = {
     backgroundColor: 'rgba(255, 255, 255, 0.9)',
     padding: '40px 20px',
@@ -164,7 +163,7 @@ function CovidSection() {
                 <div style={{ marginBottom: '20px' }}>{IconDress}</div>
                 <div style={descriptionStyle}>
                   <span style={titleStyle}>Código de Vestimenta</span>
-                  <strong>Formal / colores oscuros</strong>
+                  Formal / colores oscuros
                 </div>
               </div>
 

@@ -24,7 +24,7 @@ function FooterSection({ isInvitation }) {
                 <p style={{ margin: 0, color: '#5D4037', fontFamily: 'serif' }}>
                   <small
                     style={{
-                      fontSize: '1.0rem',
+                      fontSize: '0.90rem',
                       letterSpacing: '1px',
                       opacity: 0.8,
                     }}
