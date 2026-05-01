@@ -28,4 +28,3 @@ module.exports = {
     },
   ],
 };
-este es mi gatsby-config.js actual
