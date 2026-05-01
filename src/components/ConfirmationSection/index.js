@@ -6,7 +6,7 @@ import { styWrapper } from './styles';
 
 function ConfirmationSection({ isInvitation, guestName, codeLink }) {
   // CONFIGURACIÓN DE WHATSAPP
-  const phoneNumber = '529997401018';
+  const phoneNumber = '529984639108';
   const message = `¡Hola! Es un honor para mí confirmar mi asistencia para acompañar a Scarlet Joseline en la celebración de sus XV Años. ¡Muchas gracias por la invitación! ✨`;
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
