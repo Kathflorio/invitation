@@ -6,7 +6,6 @@ function CovidSection() {
   const colorCafeOscuro = '#5D4037';
   const colorCafeSuave = '#8B6B4A';
 
-  // --- ICONOS SVG INTEGRADOS (Para evitar que fallen los enlaces externos) ---
   const IconDress = (
     <svg
       width="60"
@@ -72,7 +71,7 @@ function CovidSection() {
     </svg>
   );
 
-  // --- ESTILOS ---
+  
   const cardStyle = {
     backgroundColor: 'rgba(255, 255, 255, 0.9)',
     padding: '40px 20px',
