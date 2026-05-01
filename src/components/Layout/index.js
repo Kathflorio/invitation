@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { Helmet } from 'react-helmet';
 import { node } from 'prop-types';
 
-import Favicon from '@assets/images/arin-miftah-favicon.png';
+import Favicon from '@assets/images/bg-welcome.jpeg';
 //import IMAGE_URL from '@assets/images/khitbahmeta.jpg';
 import '@assets/css/icomoon.css';
 import '@assets/css/bootstrap.css';
@@ -15,19 +15,19 @@ function MainLayout({ children }) {
   return (
     <Fragment>
       <Helmet>
-        <title>Arin ❤️ Miftah Wedding</title>
+        <title>Scarlet Joseline</title>
 
         {/* Favicon */}
         <link rel="icon" type="image/png" href={Favicon} />
 
         {/* font and SEO tags */}
-        <meta property="og:title" content="The Wedding of Arin & Miftah" />
+        <meta property="og:title" content="Mis xv años Scarlet Joseline" />
         <meta property="og:image" itemprop="image" content={IMAGE_URL} />
         <meta property="og:url" content="https://arin.miftahussalam.com" />
-        <meta property="og:site_name" content="The Wedding of Arin & Miftah" />
+        <meta property="og:site_name" content="Mis xv años Scarlet Joseline" />
         <meta property="og:description" content={META_DESCRIPTION} />
         <meta property="og:type" content="website" />
-        <meta name="twitter:title" content="The Wedding of Arin & Miftah" />
+        <meta name="twitter:title" content="Mis xv años Scarlet Joseline" />
         <meta name="twitter:description" content={META_DESCRIPTION} />
         <meta name="twitter:image" content={IMAGE_URL} />
         <meta name="twitter:url" content="https://arin.miftahussalam.com" />

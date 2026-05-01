@@ -41,7 +41,15 @@ export const styScrollWrapper = css`
     }
 
     .text {
-      animation: ${upAndDownAnimation} 1s infinite alternate;
+      color: #8b6b4a;
+      font-family: 'Playfair Display', serif;
+      display: block;
+      margin-top: 10px;
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-align: center;
+      text-transform: none;
     }
 
     @media screen and (max-width: 414px) {
@@ -67,7 +75,8 @@ export const styScrollWrapper = css`
       z-index: 2;
       display: inline-block;
       transform: translate(0, -50%);
-      color: #fff;
+      /* Cambiado a café para que combine con el nombre */
+      color: #8b6b4a;
       letter-spacing: 0.1em;
       text-decoration: none;
       transition: opacity 0.3s;
@@ -80,7 +89,8 @@ export const styScrollWrapper = css`
         content: '';
         width: 44px;
         height: 44px;
-        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1);
+        /* La sombra del radar ahora es un dorado muy suave */
+        box-shadow: 0 0 0 0 rgba(181, 141, 86, 0.4);
         border-radius: 100%;
         opacity: 0;
         animation: ${radarAnimation} 3s infinite;
@@ -95,44 +105,41 @@ export const styScrollWrapper = css`
         width: 16px;
         height: 16px;
         margin: -12px 0 0 -8px;
-        border-left: 1px solid #fff;
-        border-bottom: 1px solid #fff;
+        /* Color de la flecha: Café oscuro para legibilidad */
+        border-left: 2px solid #8b6b4a;
+        border-bottom: 2px solid #8b6b4a;
         transform: rotate(-45deg);
         box-sizing: border-box;
       }
     }
 
+    /* Estilo para el texto que acompaña a la flecha */
+    .text {
+      color: #8b6b4a;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
     &button:hover {
       opacity: 0.5;
-    }
-
-    @media screen and (max-width: 414px) {
-      .button {
-        bottom: 80px;
-      }
-    }
-
-    @media screen and (max-width: 360px) {
-      .button {
-        bottom: 65px;
-      }
     }
   }
 `;
 
 export const styBackground = css`
   background: linear-gradient(
-      135deg, 
-      #FFDAB9 0%,   /* Peach Puff (Melón claro) */
-      #FFB7B2 50%,  /* Rosa Melón medio */
-      #FF9AA2 100%  /* Rosa pastel cálido */
-    );
+    135deg,
+    #ffdab9 0%,
+    /* Peach Puff (Melón claro) */ #ffb7b2 50%,
+    /* Rosa Melón medio */ #ff9aa2 100% /* Rosa pastel cálido */
+  );
   background-size: cover;
   position: relative;
-  
+
   /* Esto añade un sutil brillo satinado encima */
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;

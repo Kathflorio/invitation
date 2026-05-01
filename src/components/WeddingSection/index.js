@@ -13,7 +13,7 @@ function WeddingSection({ isInvitation }) {
           <div className="row">
             <div className="col-md-8 col-md-offset-2 text-center fh5co-heading">
               <h2 className="main-font main-font__wedding" style={{ fontSize: '3.5rem', marginTop: '20px' }}>
-                Ceremonia y Recepción
+                Misa de acción de gracias y Recepción
               </h2>
               <span className="sub-title sub-title__wedding" style={{ color: '#ffffff', opacity: 0.9 }}>
                 Con la bendición de Dios y mis padres, celebraré mis XV años el:
@@ -24,7 +24,7 @@ function WeddingSection({ isInvitation }) {
             <div className="col-md-10 col-md-offset-1">
               {/* Bloque de la Misa / Ceremonia Religiosa */}
               <WeddingInfoBox
-                title="Ceremonia Religiosa"
+                title="Misa de acción de gracias"
                 time="19:00 Horas"
                 date="Viernes, 22 de Mayo 2026"
                 description="Iglesia Santa Cruz, Av. C.T.M 3, 77510 Cancún, Q.R."

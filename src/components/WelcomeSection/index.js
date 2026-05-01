@@ -2,8 +2,6 @@ import React, { Fragment, useState } from 'react';
 import { object, string, bool, func } from 'prop-types';
 import { Link } from 'gatsby';
 import confetti from 'canvas-confetti';
-
-// Importaciones de tus archivos
 import ImagenFondo from '@assets/images/image-fondo.jpg'; 
 import { GOOGLE_CALENDAR_LINK } from '@/constants';
 import CountContainer from './CountContainer';
@@ -12,11 +10,30 @@ import { styWrapper, styHero, styBackground, styButtonWrapper } from './styles';
 
 const DELAY_TIME = 1500;
 
+const CoronaSVG = () => (
+  <svg 
+    width="80" 
+    height="60" 
+    viewBox="0 0 24 24" 
+    fill="none" 
+    stroke="#B58D56" 
+    strokeWidth="1.2" 
+    strokeLinecap="round" 
+    strokeLinejoin="round"
+    style={{ marginBottom: '-10px', filter: 'drop-shadow(0px 2px 2px rgba(0,0,0,0.1))' }}
+  >
+    <path d="M5 18H19V21H5V18Z" fill="#B58D56" opacity="0.2" />
+    <path d="M2 7L7 12L12 2L17 12L22 7V19H2V7Z" />
+    <circle cx="12" cy="2" r="1" fill="#B58D56" />
+    <circle cx="2" cy="7" r="1" fill="#B58D56" />
+    <circle cx="22" cy="7" r="1" fill="#B58D56" />
+  </svg>
+);
+
 function WelcomeSection({ location, guestName, isInvitation, isAnonymGuest, codeLink, onClickDetail }) {
   const [loading, setLoading] = useState(false);
   const [alreadyDownloadData, setAlreadyDownloadData] = useState(false);
 
-  // --- ESTILOS VISUALES PERSONALIZADOS ---
   const heroCustomStyle = {
     backgroundImage: `url(${ImagenFondo})`,
     backgroundSize: 'cover',
@@ -32,7 +49,6 @@ function WelcomeSection({ location, guestName, isInvitation, isAnonymGuest, code
     zIndex: 1
   };
 
-  // --- LÓGICA DE COMPORTAMIENTO ---
   const handleScrollTo = () => {
     const element = document.getElementById('fh5co-couple');
     if (element) element.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
@@ -40,7 +56,6 @@ function WelcomeSection({ location, guestName, isInvitation, isAnonymGuest, code
 
   const handleShowDetail = () => {
     if (loading) return undefined;
-
     const duration = 3 * 1000;
     const animationEnd = Date.now() + duration;
     const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
@@ -49,27 +64,15 @@ function WelcomeSection({ location, guestName, isInvitation, isAnonymGuest, code
     const interval = setInterval(function() {
       const timeLeft = animationEnd - Date.now();
       if (timeLeft <= 0) return clearInterval(interval);
-
       const particleCount = 50 * (timeLeft / duration);
-      
-      confetti({
-        ...defaults, particleCount,
-        origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
-        colors: ['#FFB7B2', '#FFDAC1', '#ffffff']
-      });
-      confetti({
-        ...defaults, particleCount,
-        origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
-        colors: ['#FFB7B2', '#FFDAC1', '#ffffff']
-      });
+      confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 }, colors: ['#FFB7B2', '#FFDAC1', '#ffffff'] });
+      confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 }, colors: ['#FFB7B2', '#FFDAC1', '#ffffff'] });
     }, 250);
 
     try {
       const myAudio = document.getElementById('myAudio');
       if (myAudio) myAudio.play();
-    } catch {
-      console.error('FAILED_TO_PLAY_MUSIC');
-    }
+    } catch { console.error('FAILED_TO_PLAY_MUSIC'); }
 
     onClickDetail();
 
@@ -87,24 +90,11 @@ function WelcomeSection({ location, guestName, isInvitation, isAnonymGuest, code
 
   const renderGuestSection = () => {
     if (isAnonymGuest) return (
-  <div style={{ marginTop: '20px' }}>
-    <h4 className="sub-title" style={{ 
-      fontSize: '2.5rem', 
-      color: '#B58D56', 
-      marginBottom: '-10px' 
-    }}>
-      ¡Bienvenidos!
-    </h4>
-    <h2 className="to-dearest-name" style={{ 
-      color: '#8B6B4A', 
-      fontSize: '2.8rem', 
-      fontWeight: 'bold',
-      letterSpacing: '1px'
-    }}>
-      Familia y Amigos
-    </h2>
-  </div>
-);
+      <div style={{ marginTop: '20px' }}>
+        <h4 className="sub-title" style={{ fontSize: '2.5rem', color: '#B58D56', marginBottom: '-10px' }}>¡Bienvenidos!</h4>
+        <h2 className="to-dearest-name" style={{ color: '#8B6B4A', fontSize: '2.8rem', fontWeight: 'bold', letterSpacing: '1px', fontFamily: "'Great Vibes', cursive" }}>Familia y Amigos</h2>
+      </div>
+    );
     return (
       <Fragment>
         <h3 className="to-dearest" style={{ color: '#8B6B4A', fontSize: '1.3rem' }}>Acompáñanos a celebrar a</h3>
@@ -115,7 +105,6 @@ function WelcomeSection({ location, guestName, isInvitation, isAnonymGuest, code
 
   return (
     <div css={styHero} style={heroCustomStyle}>
-      {/* Aplicamos el overlay para que el texto luzca como en tu diseño de acuarela */}
       <div style={overlayStyle} />
 
       <header
@@ -128,16 +117,16 @@ function WelcomeSection({ location, guestName, isInvitation, isAnonymGuest, code
         <div className="container">
           <div className="row" css={styWrapper}>
             <div className="col-md-8 col-md-offset-2 text-center">
-              
-              {/* Estética de tipografía conservada */}
-              <h4 className="sub-title" style={{ fontSize: '4.2rem', color: '#B58D56' }}>Mis xv años</h4>
-              <h1 className="title" style={{ color: '#8B6B4A' }}>Josseline Scarlet</h1>
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '20px' }}>
+                <CoronaSVG />
+                <h4 className="sub-title" style={{ fontSize: '4.2rem', color: '#B58D56', margin: '0' }}>Mis xv años</h4>
+                <h1 className="title" style={{ color: '#8B6B4A', fontWeight: 'bold', marginTop: '5px' }}>Scarlet Joseline</h1>
+              </div>
 
               <div className={isAnonymGuest ? 'margin__bottom' : ''}>
                 <CountContainer />
               </div>
 
-              {/* Botón Agendar */}
               <div className="row" css={styButtonWrapper} style={{ display: 'flex', justifyContent: 'center' }}>
                 <div className="col-md-3">
                   <a href={GOOGLE_CALENDAR_LINK} title="Agendar" target="_blank" rel="noreferrer">
@@ -149,7 +138,6 @@ function WelcomeSection({ location, guestName, isInvitation, isAnonymGuest, code
               <br />
               {renderGuestSection()}
 
-              {/* Botón Pase (si aplica) */}
               {isInvitation && (
                 <div className="row" css={styButtonWrapper} style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
                   <div className="col-md-3">
@@ -161,9 +149,7 @@ function WelcomeSection({ location, guestName, isInvitation, isAnonymGuest, code
               )}
             </div>
           </div>
-
           <br />
-        
           <div className="row">
             <ScrollToDown loading={loading} onClick={handleShowDetail} />
           </div>
